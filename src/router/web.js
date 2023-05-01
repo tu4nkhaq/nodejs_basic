@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const {getHomePage,getNODEJS,getUserEdit,putUserUpdate,getUserDelete}= require('../controllers/HomeController');
+router.get('/',getHomePage);
+router.get('/nodejs',getNODEJS);
+router.get('/user/:id/edit',getUserEdit);
+// router.get('/user/:id/delete',getUserDelete);
+router.post('/user/update',putUserUpdate);
+router.get('/user/:id/delete',getUserDelete);
+module.exports=router;
